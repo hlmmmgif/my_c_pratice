@@ -2,17 +2,102 @@
 #include<stdlib.h>
 int main()
 {
-    int N;int fac =1;
-    scanf("%d",&N);
-    for (int i =1;i <= N;i++)
+    int base = 5,exponent = 3;
+    int Orin_base = base;int result = 1;
+    for(int i = 1;i <= exponent;i++)
     {
-        fac*=i;
-    }
-        
-    printf("%d\n",fac);
+        result *= Orin_base;
+    }    
+    printf("%d^%d = %d",base,exponent,result);
     system("pause");
     return 0;
 }
+// int main()
+// {
+//     int n = 20;
+//     printf("Odd numbers from 1 to 20:");
+//     for (int i = 0;i <= n;i++)
+//     {
+//         if(i % 2 == 0)//求模在关于对数字的修改问题上还是很好用的
+//         {
+//             continue;
+//         }
+//         printf("%d ",i);
+//     }
+//     system("pause");
+//     return 0;
+// }
+// int main()
+// {
+//     int num;printf("Please enter your number:");
+//     scanf("%d",&num);
+//     int reverse = 0;int remainder;
+//     int Oringinalnum = num;//像这样对给出数值进行修改的问题，尽量先储存好原数值
+//     while(num != 0)
+//     {
+//         remainder = num % 10;
+//         reverse = reverse * 10 + remainder;
+//         num = num / 10;
+//     }
+//     if(Oringinalnum == reverse)
+//     {
+//         printf("%d is a PALINDROME number",Oringinalnum);
+//     }
+//     else
+//     {
+//         printf("%d is not a PALINDROME number",Oringinalnum);
+//     }
+//     system("pause");
+//     return 0;
+// }
+// // int main() {
+//     int num = 1234, reversed = 0, remainder;
+
+//     int originalNum = num; // Keep the original number for output
+
+//     while (num != 0) {
+//         remainder = num % 10;         // 1. Get the last digit
+//         reversed = reversed * 10 + remainder; // 2. Append it to reversed number
+//         num /= 10;                    // 3. Remove the last digit
+//     }
+
+//     printf("Original number: %d\n", originalNum);
+//     printf("Reversed number: %d\n", reversed);
+//     system("pause");
+//     return 0;
+// }
+// int main() {
+//     int num = 12568, count = 0;
+
+//     // Handle the case where the input is 0 separately
+//     if (num == 0) {
+//         count = 1;
+//     }
+
+//     int temp = num; // Use a temporary variable to preserve the original number
+
+//     while (temp > 0) {
+//         temp = temp / 10;
+//         count++;
+//     }
+
+//     printf("The number of digits in %d is: %d\n", num, count);
+//     return 0;
+// }
+//==============正确答案==============
+// int main()
+// {
+//     int N;int fac =1;
+//     scanf("%d",&N);
+//     for (int i =1;i <= N;i++)
+//     {
+//         fac*=i;
+//     }
+        
+//     printf("%d\n",fac);
+//     system("pause");
+//     return 0;
+// }
 // #include <stdio.h>
 
 // int main() {
